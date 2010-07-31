@@ -25,6 +25,14 @@ Playing sounds
 4. Save your settings by pressing 's'
 
 
+Mouse
+
+drag center: move sound
+drag edge: shrink or expand sound
+double click sound: toggle pause
+double click walker: toggle pause
+
+
 Keyboard 
 
 s: Save settings in SoundField/bin/data/settings/SoundFieldSettings.xml (this overwrites the existing file)

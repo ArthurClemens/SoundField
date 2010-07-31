@@ -1,0 +1,27 @@
+let SoundFieldSettings override AppSettings:
+	APP_FONT_PATH
+	APP_FONT_SIZE
+	APP_INTERVAL_DOUBLE_CLICK
+	APP_FRAMERATE
+
+make MIN_RADIUS_OUTER_CIRCLE dependent on window scale
+
+avoid tick when pause/unpause sound
+
+create circle for elapsed time
+
+hide cursor and draw cross instead
+	use ofHideCursor()
+
+walker smooth edges: calculate true color of blend on background, draw without transparency
+
+check Walker physics
+
+error message on screen if:
+- appSettings XML not found
+- appSettings XML read error
+
+save: save elapsed time of sounds
+	=> start at that exact point in time
+	
+code documentation

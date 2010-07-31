@@ -101,7 +101,6 @@
 		8E3732EE11FA3C9D008DBC08 /* ofxXmlSerializable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSerializable.cpp; sourceTree = "<group>"; };
 		8EAC688011F4ED05003E9584 /* sfSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfSound.h; sourceTree = "<group>"; };
 		8EAC688111F4ED05003E9584 /* sfSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sfSound.cpp; sourceTree = "<group>"; };
-		8EBB54CB11F74FDF00FAAF6A /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		8EBB564311F7927200FAAF6A /* sfHelperControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfHelperControl.h; sourceTree = "<group>"; };
 		8EBB564411F7927200FAAF6A /* sfHelperControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sfHelperControl.cpp; sourceTree = "<group>"; };
 		8EBB574911F7A00E00FAAF6A /* sfAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfAppSettings.h; sourceTree = "<group>"; };
@@ -458,7 +457,6 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				8EBB54CB11F74FDF00FAAF6A /* Notes */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* App.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* App.cpp */,
