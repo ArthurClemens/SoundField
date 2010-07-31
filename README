@@ -2,7 +2,7 @@ ABOUT
 
 Visual audio mixer. The graphical representation of sounds brings concepts to audio that are traditionally more related to other fields, such as proximity, boundary, overlap and placing.
 
-Written in C++ using OpenFrameworks.
+Based on my earlier work written in Director (2000), rewritten in C++ using OpenFrameworks.
 
 
 
@@ -25,9 +25,15 @@ Playing sounds
 4. Save your settings by pressing 's'
 
 
+Keyboard 
+
+s: Save settings in SoundField/bin/data/settings/SoundFieldSettings.xml
+f: toggle fullscreen
+esc: quit
+
+
 
 LICENSE
-
 
 The MIT License
 
