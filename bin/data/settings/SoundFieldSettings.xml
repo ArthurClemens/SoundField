@@ -1,0 +1,108 @@
+<App>
+    <fullscreen>0</fullscreen>
+    <windowWidth>1024</windowWidth>
+    <windowHeight>768</windowHeight>
+</App>
+<sfWalker>
+    <x>280.998901</x>
+    <y>264.000183</y>
+    <activeState>2</activeState>
+</sfWalker>
+<sfSound>
+    <x>40.000000</x>
+    <y>30.000000</y>
+    <zIndex>0</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/16t1.mp3</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.119653</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>40.000000</x>
+    <y>80.000000</y>
+    <zIndex>1</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/Digital Transition.mp3</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.974634</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>40.000000</x>
+    <y>130.000000</y>
+    <zIndex>2</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/bach.mp3</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.743627</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>40.000000</x>
+    <y>330.000000</y>
+    <zIndex>3</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/stretcher.mp3</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.323671</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>40.000000</x>
+    <y>230.000000</y>
+    <zIndex>4</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/placebo.wav</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.176233</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>40.000000</x>
+    <y>280.000000</y>
+    <zIndex>5</zIndex>
+    <radius>20.000000</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/radio.mp3</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.657730</position>
+    </sfSoundPlayer>
+</sfSound>
+<sfSound>
+    <x>193.000000</x>
+    <y>180.000000</y>
+    <zIndex>6</zIndex>
+    <radius>220.194016</radius>
+    <state>2</state>
+    <activeState>2</activeState>
+    <sfSoundPlayer>
+        <filePath>../../../data/sounds/martin.wav</filePath>
+        <streaming>1</streaming>
+        <paused>0</paused>
+        <position>0.549513</position>
+    </sfSoundPlayer>
+</sfSound>
