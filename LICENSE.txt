@@ -1,34 +1,3 @@
-ABOUT
-
-Visual audio mixer. The graphical representation of sounds brings concepts to audio that are traditionally more related to other fields, such as proximity, boundary, overlap and placing.
-
-Written in C++ using OpenFrameworks.
-
-
-
-USE
-
-Build instructions for Mac OS X.
-
-1. Get OpenFrameworks: http://openframeworks.cc/
-2. Put the source code folder in your_openframeworks_folder/apps/some_folder/
-3. Get the addons ofxDirList and ofxXmlSettings and put them in your_openframeworks_folder/addons/
-4. Build and run the project from XCode
-5. If all goes well you can play the distributed sound files
-
-
-Playing sounds
-
-1. Remove the distributed sound files in SoundField/bin/data/sounds and put your own. You can use audio files with format mp3/mp2/aiff/wav/ogg/raw
-2. Delete the distributed settings file 'SoundFieldSettings' in SoundField/bin/data/settings/
-3. Start SoundField
-4. Save your settings by pressing 's'
-
-
-
-LICENSE
-
-
 The MIT License
 
 Copyright (c) 2010 Arthur Clemens, arthur@visiblearea.com
