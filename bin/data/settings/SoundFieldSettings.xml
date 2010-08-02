@@ -4,7 +4,7 @@
     <windowHeight>768</windowHeight>
 </App>
 <sfWalker>
-    <x>280.998901</x>
+    <x>280.002441</x>
     <y>264.000183</y>
     <activeState>2</activeState>
 </sfWalker>
@@ -17,9 +17,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/16t1.mp3</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.119653</position>
+        <position>0.021716</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -31,9 +30,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/Digital Transition.mp3</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.974634</position>
+        <position>0.497179</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -45,9 +43,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/bach.mp3</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.743627</position>
+        <position>0.014045</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -59,9 +56,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/stretcher.mp3</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.323671</position>
+        <position>0.705314</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -73,9 +69,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/placebo.wav</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.176233</position>
+        <position>0.357431</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -87,9 +82,8 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/radio.mp3</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.657730</position>
+        <position>0.012256</position>
     </sfSoundPlayer>
 </sfSound>
 <sfSound>
@@ -101,8 +95,7 @@
     <activeState>2</activeState>
     <sfSoundPlayer>
         <filePath>../../../data/sounds/martin.wav</filePath>
-        <streaming>1</streaming>
         <paused>0</paused>
-        <position>0.549513</position>
+        <position>0.230861</position>
     </sfSoundPlayer>
 </sfSound>

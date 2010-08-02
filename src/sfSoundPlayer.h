@@ -3,9 +3,11 @@
 #ifndef _SOUND
 #define _SOUND
 
+#include <sys/stat.h>
 #include "ofSoundPlayer.h"
 #include "ofxXmlSettings.h"
 #include "ofxXmlSerializable.h"
+#include "sfAppSettings.h"
 
 class sfSoundPlayer : public ofSoundPlayer, public ofxXmlSerializable {
 	
@@ -21,7 +23,6 @@ public:
 	~sfSoundPlayer();
 	sfSoundPlayer* init(string filePath = "");
 	void setFilePath(string filePath);
-	void loadSound();
 	void pauseSound(bool state);
 	string getPrintFileName();
 	
@@ -29,7 +30,7 @@ private:
 	void _xmlWrite(ofxXmlSettings& xml);
 	void _xmlRead(ofxXmlSettings& xml);
 	string _generatePrintFileName();
-
+	int _getFileSize(string inFilePath);
 };
 
 #endif

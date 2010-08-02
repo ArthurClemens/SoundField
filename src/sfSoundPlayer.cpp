@@ -7,7 +7,6 @@ sfSoundPlayer::sfSoundPlayer(string inFilePath) {
 
 sfSoundPlayer* sfSoundPlayer::init(string inFilePath) {
 	printFileName = "";
-	doStream = 1;
 	isPaused = 0;
 	setMultiPlay(0);
 	setVolume(0);
@@ -19,17 +18,32 @@ sfSoundPlayer* sfSoundPlayer::init(string inFilePath) {
 void sfSoundPlayer::setFilePath(string inFilePath) {
 	if (inFilePath != "") {
 		filePath = inFilePath;
-		loadSound();
+		// do not stream small files: they won't play
+		int fileSize = _getFileSize(inFilePath);
+		doStream = (fileSize < 1024 * sfAppSettings::getIntValue("SOUNDFILE_MIN_KBSIZE_FOR_STREAMING") ) ? 0 : 1;
+		loadSound(filePath, doStream);
 		play();
 	}
 }
 
-sfSoundPlayer::~sfSoundPlayer() {
-	super::unloadSound();
+int sfSoundPlayer::_getFileSize(string inFilePath) {
+	struct stat S;
+#ifdef WIN32 
+	if ( -1 == _stat(inFilePath.c_str(), &S)) {
+		printf("Error in _getFileSize!\n");
+		return -1;
+	}
+#else
+	if ( -1 == stat(inFilePath.c_str(), &S)) {
+		printf("Error in _getFileSize!\n");
+		return -1;
+	}
+#endif
+	return S.st_size;
 }
 
-void sfSoundPlayer::loadSound() {
-	super::loadSound(filePath, doStream);
+sfSoundPlayer::~sfSoundPlayer() {
+	super::unloadSound();
 }
 
 void sfSoundPlayer::pauseSound(bool inState) {
@@ -39,13 +53,11 @@ void sfSoundPlayer::pauseSound(bool inState) {
 
 void sfSoundPlayer::_xmlWrite(ofxXmlSettings& xml) {		
 	xml.addValue("filePath", filePath);
-	xml.addValue("streaming", doStream ? 1 : 0);
 	xml.addValue("paused", isPaused ? 1 : 0);
 	xml.addValue("position", getPosition());
 }
 
 void sfSoundPlayer::_xmlRead(ofxXmlSettings& xml) {
-	doStream = xml.getValue("streaming", doStream);
 	isPaused = xml.getValue("paused", isPaused);
 	setPosition(xml.getValue("position", 0));
 	setFilePath( xml.getValue("filePath", filePath) );

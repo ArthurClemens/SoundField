@@ -8,9 +8,6 @@ make MIN_RADIUS_OUTER_CIRCLE dependent on window scale
 
 avoid tick when pause/unpause sound
 
-short sounds cannot be streamed: automatically detect
-	have option to stream/direct play
-
 create circle for elapsed time
 
 hide cursor and draw cross instead

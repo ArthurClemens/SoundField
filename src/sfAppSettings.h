@@ -32,6 +32,9 @@ private:
 	
 	// VALUES READ FROM CONFIG FILE
 	
+	// sound
+//	int SOUND_MIN_FILESIZE_FOR_STREAMING
+	
 	// center dot
 //	float RADIUS_CENTER_DOT;
 //	float WIDTH_CENTER_GRAB_HELPER;
