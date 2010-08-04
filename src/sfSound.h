@@ -19,8 +19,8 @@ class sfSound : public sfInteractiveObject, public ofxXmlSerializable {
 	
 public:
 	
-	sfSound(string filePath = "", int zIndex = 0);
-	sfSound* init(string filePath, int zIndex);
+	sfSound(string filePath = "", int zIndex = 0, float radius = 20, float x = 0, float y = 0);
+	sfSound* init(string filePath, int zIndex, float radius, float x, float y);
 
 	void setup();
 	void exit();

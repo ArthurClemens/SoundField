@@ -4,6 +4,12 @@ bool sortSoundShapeByZIndex(sfSound* a, sfSound* b) {
 	return a->getZIndex() < b->getZIndex();
 }
 
+float randomInRange (int inStartRange, int inEndRange) {
+	float delta = inEndRange - inStartRange;
+	float randomNumber = (float)rand() / RAND_MAX;
+	return inStartRange + delta * randomNumber;
+}
+
 App::App() {
 	ofxXmlSerializable::setup("App");
 	sfAppSettings::init();
@@ -67,9 +73,50 @@ void App::_loadSoundsFromDirectory() {
 	
 	sort(paths.begin(), paths.end());
 	fileCount = paths.size();
-	for(int i = 0; i < fileCount; i++){
-		mSounds.push_back( new sfSound(paths[i], i) );
-    }
+	
+	// create grid
+	// start with a square
+	float evenly = sqrt(fileCount);
+	
+	// take screen ratio into account
+	float windowWidth = (float)sfAppSettings::getIntValue("windowWidth");
+	float windowHeight = (float)sfAppSettings::getIntValue("windowHeight");
+	float screenWidth = .8 * windowWidth;
+	float screenHeight = .8 * windowHeight;
+	float screenRatio = screenWidth / screenHeight;
+	
+	int rows = ceil(evenly / screenRatio);
+	int cols = ceil(fileCount/(float)rows);
+	
+	// start with the max radius where all circles are adjacent
+	// then draw the smaller circles inside the max radius
+	float circleSize;
+	if (screenWidth > screenHeight ) {
+		circleSize = screenWidth / (float)cols;
+	} else {
+		circleSize = screenHeight / (float)rows;
+	}
+	
+	srand ( time(NULL) );
+	
+	float x, y;
+	float circleRadius = .75 * .5 * circleSize;
+	// offset so that everything is drawn in the middle
+	float xOffset = .5 * (windowWidth - (circleSize * cols));
+	float yOffset = .5 * (windowHeight - (circleSize * rows));
+	float RANDOM_VARIATION = circleSize * .15;
+	for (int i=0; i < fileCount; i++) {
+		int row = (i%rows);
+		int col = floor(i/rows);
+		x = .5 * circleSize + xOffset + col * circleSize;
+		y = .5 * circleSize + yOffset + row * circleSize;
+		x /= mWindowScale;
+		y /= mWindowScale;
+		
+		x += randomInRange(-RANDOM_VARIATION, RANDOM_VARIATION);
+		y += randomInRange(-RANDOM_VARIATION, RANDOM_VARIATION);
+		mSounds.push_back( new sfSound(paths[i], i, circleRadius, x, y ) );
+	}
 }
 	
 void App::draw() {

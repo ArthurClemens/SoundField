@@ -1,12 +1,12 @@
 
 #include "sfSound.h"
 
-sfSound::sfSound(string inFilePath, int inZIndex) {
+sfSound::sfSound(string inFilePath, int inZIndex, float inRadius, float inX, float inY) {
 	ofxXmlSerializable::setup("sfSound");
-	init(inFilePath, inZIndex);
+	init(inFilePath, inZIndex, inRadius, inX, inY);
 }
 
-sfSound* sfSound::init(string inFilePath, int inZIndex) {
+sfSound* sfSound::init(string inFilePath, int inZIndex, float inRadius, float inX, float inY) {
 	super::init();
 
 	TTF.loadFont(sfAppSettings::getStringValue("APP_FONT_PATH"), sfAppSettings::getFloatValue("APP_FONT_SIZE"));
@@ -22,10 +22,8 @@ sfSound* sfSound::init(string inFilePath, int inZIndex) {
 	mZIndex = inZIndex;
 	
 	// set default values
-	float x = 40;
-	float y = 30 + inZIndex * 50;
-	mLoc = ofPoint(x, y);
-	_setRadius(20);
+	_setRadius(inRadius);
+	mLoc = ofPoint(inX, inY);
 	
 	_setState(STATE_NEUTRAL);
 	_setActiveState(STATE_NEUTRAL);
